@@ -194,7 +194,8 @@ class Signal0 extends Signal<Slot0, Void -> Void>
 		
 		while (slotsToProcess.nonEmpty)
 		{
-			slotsToProcess.head.execute();
+            var slot0:Slot0 = slotsToProcess.head;
+            slot0.execute();
 			slotsToProcess = slotsToProcess.tail;
 		}
 	}
